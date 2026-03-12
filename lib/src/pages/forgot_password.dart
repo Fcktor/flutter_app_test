@@ -20,16 +20,93 @@ class ForgotPassword extends StatelessWidget {
         child: Column(
           children: [
             const Text(
-              'Forgot password',
+              'Forgot password?',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Colors.black87
               ),
-            )
+            ),
+            Container(
+              padding: const EdgeInsets.all(20.0),
+              child: const Text(
+                'Please enter your email address to receive a link to create a new password via email.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87
+                ),
+              ),
+            ),
+            _emailInput(),
+            _sendButton(context)
+
           ],
         ),
       ),
     );
   }
+}
+
+Widget _emailInput() {
+  return Container(
+    decoration: BoxDecoration(
+      color: Color.fromRGBO(142, 142, 147, 1.2),
+      borderRadius: BorderRadius.circular(30.0)
+    ),
+    margin: const EdgeInsets.only(top: 40),
+    padding: const EdgeInsets.only(left: 20),
+    child: TextField(
+      keyboardType: TextInputType.emailAddress,
+      decoration: InputDecoration(
+        hintText: 'Enter your email',
+        prefixIcon: const Icon(Icons.email_outlined),
+        border: OutlineInputBorder(
+          borderSide: BorderSide.none
+        )
+      ),
+    ),
+  );
+}
+
+Widget _sendButton(BuildContext context) {
+  return Container(
+    padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+    child: ElevatedButton(
+      onPressed: () {
+        _showAlertDialog(context);
+      },
+      child: const Text('Send'),
+    ),
+  );
+}
+
+void _showAlertDialog(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) => AlertDialog(
+      title: const Text('Email sent'),
+      content: const Text('Please check your email to reset your password.'),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.pop(context),
+          child: const Text('OK'),
+        ),
+        _doneButton(context)
+      ],
+    ),
+  );
+}
+
+Widget _doneButton(BuildContext context) {
+  return Container(
+    padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+    child: ElevatedButton(
+      onPressed: () {
+        Navigator.pushNamed(context, 'login');
+      },
+      child: const Text('Done'),
+    ),
+  );
 }
