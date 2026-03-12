@@ -51,12 +51,12 @@ class ForgotPassword extends StatelessWidget {
 
 Widget _emailInput() {
   return Container(
+    margin: const EdgeInsets.fromLTRB(20, 40, 20, 0),
+    padding: const EdgeInsets.only(left: 20),
     decoration: BoxDecoration(
       color: Color.fromRGBO(142, 142, 147, 1.2),
       borderRadius: BorderRadius.circular(30.0)
     ),
-    margin: const EdgeInsets.only(top: 40),
-    padding: const EdgeInsets.only(left: 20),
     child: TextField(
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
