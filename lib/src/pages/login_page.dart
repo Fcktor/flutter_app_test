@@ -177,7 +177,7 @@ Widget _loginButton(BuildContext context) {
     height: 50,
     margin: const EdgeInsets.only(top: 30),
     decoration: BoxDecoration(
-      color: Colors.blueAccent,
+      color: Colors.orange,
       borderRadius: BorderRadius.circular(30.0)
     ),
     child: Center(

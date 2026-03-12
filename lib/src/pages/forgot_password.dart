@@ -74,6 +74,12 @@ Widget _sendButton(BuildContext context) {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
     child: ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.orange,          // color de fondo del botón
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+        ),
+      ),
       onPressed: () {
         _showAlertDialog(context);
       },
