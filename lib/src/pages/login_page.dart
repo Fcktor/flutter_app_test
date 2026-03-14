@@ -101,22 +101,23 @@ class LoginPage extends StatelessWidget {
                             ),
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 10),
-                              child: Text(
-                                'Sign up',
-                                style: TextStyle(
-                                  color: Colors.orange,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.pushNamed(context, 'sign-up');
+                                },
+                                child: Text(
+                                  'Sign up',
+                                  style: TextStyle(
+                                    color: Colors.orange,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500
+                                  ),
                                 ),
                               ),
                             )
-                            
                           ],
                         ),
                       )
-
-
-
                     ],
                   ),
                 ),
