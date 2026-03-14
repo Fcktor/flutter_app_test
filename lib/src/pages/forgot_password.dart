@@ -54,7 +54,7 @@ Widget _emailInput() {
     margin: const EdgeInsets.fromLTRB(20, 40, 20, 0),
     padding: const EdgeInsets.only(left: 20),
     decoration: BoxDecoration(
-      color: Color.fromRGBO(142, 142, 147, 1.2),
+      color: Color.fromRGBO(142, 142, 147, 0.5),
       borderRadius: BorderRadius.circular(30.0)
     ),
     child: TextField(
@@ -91,28 +91,53 @@ Widget _sendButton(BuildContext context) {
 void _showAlertDialog(BuildContext context) {
   showDialog(
     context: context,
+    barrierDismissible: false,
     builder: (BuildContext context) => AlertDialog(
-      title: const Text('Email sent'),
-      content: const Text('Please check your email to reset your password.'),
-      actions: [
-        TextButton(
-          onPressed: () => Navigator.pop(context),
-          child: const Text('OK'),
-        ),
-        _doneButton(context)
-      ],
-    ),
-  );
-}
-
-Widget _doneButton(BuildContext context) {
-  return Container(
-    padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-    child: ElevatedButton(
-      onPressed: () {
-        Navigator.pushNamed(context, 'login');
-      },
-      child: const Text('Done'),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0),
+      ),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            'lib/src/assets/lock.png',
+            height: 60,
+            width: 60,
+          ),
+          const SizedBox(height: 20),
+          const Text(
+            'Email sent successfully!',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.black87
+            ),
+          ),
+          const SizedBox(height: 10),
+          const Text(
+            'Please check your inbox for the password reset link.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 14,
+              color: Colors.black54
+            ),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.orange,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30.0),
+              ),
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, 'login');
+            },
+            child: const Text('OK'),
+          )
+          
+        ],
+      ),
     ),
   );
 }

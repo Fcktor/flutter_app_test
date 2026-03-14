@@ -132,7 +132,7 @@ class LoginPage extends StatelessWidget {
 Widget _emailInput() {
   return Container(
     decoration: BoxDecoration(
-      color: Color.fromRGBO(142, 142, 147, 1.2),
+      color: Color.fromRGBO(142, 142, 147, 0.5),
       borderRadius: BorderRadius.circular(30.0)
     ),
     margin: const EdgeInsets.only(top: 40),
@@ -153,7 +153,7 @@ Widget _emailInput() {
 Widget _password() {
   return Container(
     decoration: BoxDecoration(
-      color: Color.fromRGBO(142, 142, 147, 1.2),
+      color: Color.fromRGBO(142, 142, 147, 0.5),
       borderRadius: BorderRadius.circular(30.0)
     ),
     margin: const EdgeInsets.only(top: 15),
