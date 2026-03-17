@@ -178,11 +178,16 @@ Widget _loginButton(BuildContext context) {
     width: double.infinity,
     height: 50,
     margin: const EdgeInsets.only(top: 30),
-    decoration: BoxDecoration(
-      color: Colors.orange,
-      borderRadius: BorderRadius.circular(30.0)
-    ),
-    child: Center(
+    child: ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.orange,          // color de fondo del botón
+        shape: RoundedRectangleBorder(          // forma del botón
+          borderRadius: BorderRadius.circular(30.0), // bordes redondeados
+        ),
+      ),
+      onPressed: () {
+        Navigator.pushNamed(context, 'tabs');
+      },
       child: Text(
         'Login',
         style: TextStyle(
@@ -191,6 +196,6 @@ Widget _loginButton(BuildContext context) {
           fontWeight: FontWeight.bold
         ),
       ),
-    ),
+  )
   );
 }
