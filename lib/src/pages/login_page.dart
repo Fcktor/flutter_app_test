@@ -160,6 +160,7 @@ Widget _password() {
     margin: const EdgeInsets.only(top: 15),
     padding: const EdgeInsets.only(left: 20),
     child: TextField(
+      keyboardType: TextInputType.visiblePassword,
       obscureText: true,
       decoration: InputDecoration(
         hintText: 'Password',

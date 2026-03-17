@@ -33,7 +33,22 @@ class SignUpPage extends StatelessWidget {
             _phoneInput(),
             _birthdayInput(),
             _passwordInput(),
-            _sendButton(context)
+            _sendButton(context),
+            Container(
+              margin: const EdgeInsets.only(top: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'By clicking "Sign up" you agree to the following Terms and Conditions.',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black54
+                    ),
+                  ),
+                ],
+              ),
+            )
 
           ],
         ),
@@ -114,6 +129,7 @@ Widget _passwordInput() {
       borderRadius: BorderRadius.circular(30.0)
     ),
     child: TextField(
+      keyboardType: TextInputType.visiblePassword,
       obscureText: true,
       decoration: InputDecoration(
         hintText: 'Enter your password',
@@ -149,7 +165,7 @@ Widget _emailInput() {
 
 Widget _sendButton(BuildContext context) {
   return Container(
-    padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+    padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
     child: ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.orange,          // color de fondo del botón
