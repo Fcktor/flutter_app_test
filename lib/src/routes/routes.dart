@@ -6,7 +6,7 @@ import 'package:flutter_app_test/src/features/presentation/welcome_page/view/wel
 import 'package:flutter_app_test/src/features/presentation/login_page/view/login_page.dart';
 import 'package:flutter_app_test/src/features/presentation/forgot_password_page/view/forgot_password.dart';
 import 'package:flutter_app_test/src/features/presentation/sign_up_page/view/sign_up_page.dart';
-import 'package:flutter_app_test/src/features/presentation/tabs/tabs_page.dart';
+import 'package:flutter_app_test/src/features/presentation/tabs/tabs_page/view/tabs_page.dart';
 
 
 
