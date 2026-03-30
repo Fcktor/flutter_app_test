@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 
 //pages
-import 'package:flutter_app_test/src/pages/welcome_page.dart';
-import 'package:flutter_app_test/src/pages/login_page.dart';
-import 'package:flutter_app_test/src/pages/forgot_password.dart';
-import 'package:flutter_app_test/src/pages/sign_up_page.dart';
-import 'package:flutter_app_test/src/tabs/tabs_page.dart';
+import 'package:flutter_app_test/src/features/presentation/welcome_page/view/welcome_page.dart';
+import 'package:flutter_app_test/src/features/presentation/login_page/view/login_page.dart';
+import 'package:flutter_app_test/src/features/presentation/forgot_password_page/view/forgot_password.dart';
+import 'package:flutter_app_test/src/features/presentation/sign_up_page/view/sign_up_page.dart';
+import 'package:flutter_app_test/src/features/presentation/tabs/tabs_page.dart';
 
 
 

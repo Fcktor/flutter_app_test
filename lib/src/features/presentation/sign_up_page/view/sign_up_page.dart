@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 //widgets
-import 'package:flutter_app_test/src/widget/back_button.dart';
+import 'package:flutter_app_test/src/features/presentation/widget/back_button.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
   
-import 'package:flutter_app_test/src/tabs/explore_tab.dart';
-import 'package:flutter_app_test/src/tabs/favorite_tab.dart';
-import 'package:flutter_app_test/src/tabs/my_order_tab.dart';
-import 'package:flutter_app_test/src/tabs/profile_tab.dart';
+import 'package:flutter_app_test/src/features/presentation/tabs/explore_tab.dart';
+import 'package:flutter_app_test/src/features/presentation/tabs/favorite_tab.dart';
+import 'package:flutter_app_test/src/features/presentation/tabs/my_order_tab.dart';
+import 'package:flutter_app_test/src/features/presentation/tabs/profile_tab.dart';
 
 
 class TabsPage extends StatefulWidget {
