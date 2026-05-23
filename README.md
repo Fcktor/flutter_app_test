@@ -4,11 +4,11 @@ Una aplicación móvil de delivery de comida desarrollada con Flutter. Prototipo
 
 ## ✨ Features
 
-- **Pantalla de bienvenida** con fondo borroso y dos opciones de acceso
-- **Autenticación**: Login, Sign Up y recuperación de contraseña
-- **Navegación por tabs**: Explore, My Order, Favorite y Profile
-- **Exploración**: Carrusel de tarjetas con PageView para descubrir lugares
-- **Diseño responsive** adaptado a dispositivos móviles
+- **Pantalla de bienvenida** con fondo borroso y dos opciones de acceso.
+- **Autenticación**: Login, Sign Up y recuperación de contraseña.
+- **Navegación por tabs**: Explore, My Order, Favorite y Profile.
+- **Exploración**: Carrusel de tarjetas con PageView para descubrir lugares.
+- **Diseño responsive** adaptado a dispositivos móviles.
 
 ## 🛠 Built With
 
