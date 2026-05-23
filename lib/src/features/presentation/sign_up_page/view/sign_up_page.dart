@@ -174,7 +174,6 @@ Widget _sendButton(BuildContext context) {
         ),
       ),
       onPressed: () {
-        ;
       },
       child: const Text('Sign up'),
     ),

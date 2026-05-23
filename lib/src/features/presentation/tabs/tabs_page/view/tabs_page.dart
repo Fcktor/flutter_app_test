@@ -16,7 +16,7 @@ class TabsPage extends StatefulWidget {
 
 class _TabsPageState extends State<TabsPage> {
 
-  List<Widget> _widgetOptions = [
+  final List<Widget> _widgetOptions = [
     ExploreTab(),
     MyOrderTab(),
     FavoriteTab(),

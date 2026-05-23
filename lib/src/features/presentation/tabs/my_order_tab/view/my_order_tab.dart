@@ -10,10 +10,8 @@ class MyOrderTab extends StatefulWidget {
 class _MyOrderTabState extends State<MyOrderTab> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Center(
-        child: Text('My order Tab'),
-      ),
+    return const Center(
+      child: Text('My order Tab'),
     );
   }
 }

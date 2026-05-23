@@ -10,7 +10,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_app_test/src/features/presentation/widget/back_button.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +22,14 @@ class LoginPage extends StatelessWidget {
     );
 
     return Scaffold(
-      body: Column(
+      body: SingleChildScrollView(
+        child: Column(
         children: [
           Stack(
             children: [
               Image.asset(
                 width: double.infinity,
-                height: 138, //lo varío para probar 500 400
+                height: 138,
                 fit: BoxFit.cover,
                 'lib/src/assets/images/login_background.jpg'),
               Container(
@@ -41,7 +42,6 @@ class LoginPage extends StatelessWidget {
             offset: const Offset(0, -20),
             child: Container(
               width: double.infinity,
-              height: 500,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20.0)
@@ -125,6 +125,7 @@ class LoginPage extends StatelessWidget {
             ),
           )
         ],
+      ),
       )
     );
   }
