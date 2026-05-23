@@ -1,16 +1,96 @@
-# flutter_app_test
+# Delivery App Test
 
-A new Flutter project.
+Una aplicación móvil de delivery de comida desarrollada con Flutter. Prototipo funcional con navegación entre pantallas de autenticación y exploración de lugares.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- **Pantalla de bienvenida** con fondo borroso y dos opciones de acceso
+- **Autenticación**: Login, Sign Up y recuperación de contraseña
+- **Navegación por tabs**: Explore, My Order, Favorite y Profile
+- **Exploración**: Carrusel de tarjetas con PageView para descubrir lugares
+- **Diseño responsive** adaptado a dispositivos móviles
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠 Built With
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **[Flutter](https://flutter.dev/)** — SDK 3.10.3
+- **[Dart](https://dart.dev/)** — ^3.10.3
+- **[card_swiper](https://pub.dev/packages/card_swiper)** — Carrusel de tarjetas
+- **[cupertino_icons](https://pub.dev/packages/cupertino_icons)** — Iconos iOS
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📁 Project Structure
+
+```
+lib/
+├── main.dart                          # Entry point de la app
+└── src/
+    ├── assets/                        # Recursos estáticos (imágenes, iconos)
+    │   ├── images/
+    │   └── ...
+    ├── colors/
+    │   └── colors.dart                # Paleta de colores global
+    ├── features/
+    │   └── presentation/
+    │       ├── forgot_password_page/  # Recuperación de contraseña
+    │       ├── login_page/            # Inicio de sesión
+    │       ├── sign_up_page/          # Registro de usuario
+    │       ├── tabs/                  # Navegación principal con tabs
+    │       │   ├── explore_tabs/      # Descubrir lugares
+    │       │   ├── favorite_tab/      # Favoritos (placeholder)
+    │       │   ├── my_order_tab/      # Pedidos (placeholder)
+    │       │   ├── profile_tab/       # Perfil (placeholder)
+    │       │   └── tabs_page/         # Bottom Navigation Bar
+    │       ├── welcome_page/          # Pantalla de bienvenida
+    │       └── widget/                # Widgets reutilizables
+    │           └── back_button.dart   # Botón de retroceso
+    └── routes/
+        └── routes.dart                # Definición de rutas
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Flutter SDK 3.10.3 o superior
+- Dart SDK 3.10.3 o superior
+
+### Installation
+
+```bash
+# Clonar el repositorio
+git clone <url-del-repositorio>
+
+# Entrar al directorio
+cd flutter_app_test
+
+# Instalar dependencias
+flutter pub get
+
+# Ejecutar en modo debug
+flutter run
+```
+
+### Running Tests
+
+```bash
+flutter test
+```
+
+## 📱 Screens
+
+| Screen | Route | Description |
+|---|---|---|
+| Welcome | `/welcome` | Landing page con branding y acceso a login/signup |
+| Login | `/login` | Formulario de inicio de sesión |
+| Sign Up | `/sign-up` | Formulario de registro |
+| Forgot Password | `/forgot-password` | Recuperación de contraseña vía email |
+| Tabs (Main) | `/tabs` | Navegación principal con bottom tabs |
+
+## 🧪 Testing
+
+El proyecto incluye tests widget para:
+- Renderizado correcto de la pantalla de bienvenida
+- Navegación desde Welcome a Login
+
+## 📄 License
+
+This project is private and not licensed for public distribution.
