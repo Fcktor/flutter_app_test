@@ -5,7 +5,7 @@ Una aplicación móvil de delivery de comida desarrollada con Flutter. Prototipo
 ## ✨ Features
 
 - **Pantalla de bienvenida** con fondo borroso y dos opciones de acceso.
-- **Autenticación**: Login, Sign Up y recuperación de contraseña.
+- **Autenticación**: Login, Sign Up y recuperación de contraseña con validación de formularios.
 - **Navegación por tabs**: Explore, My Order, Favorite y Profile.
 - **Exploración**: Carrusel de tarjetas con PageView para descubrir lugares.
 - **Diseño responsive** adaptado a dispositivos móviles.
@@ -14,7 +14,6 @@ Una aplicación móvil de delivery de comida desarrollada con Flutter. Prototipo
 
 - **[Flutter](https://flutter.dev/)** — SDK 3.10.3
 - **[Dart](https://dart.dev/)** — ^3.10.3
-- **[card_swiper](https://pub.dev/packages/card_swiper)** — Carrusel de tarjetas
 - **[cupertino_icons](https://pub.dev/packages/cupertino_icons)** — Iconos iOS
 
 ## 📁 Project Structure
@@ -79,17 +78,21 @@ flutter test
 
 | Screen | Route | Description |
 |---|---|---|
-| Welcome | `/welcome` | Landing page con branding y acceso a login/signup |
-| Login | `/login` | Formulario de inicio de sesión |
-| Sign Up | `/sign-up` | Formulario de registro |
-| Forgot Password | `/forgot-password` | Recuperación de contraseña vía email |
-| Tabs (Main) | `/tabs` | Navegación principal con bottom tabs |
+| Welcome | `welcome` | Landing page con branding y acceso a login/signup |
+| Login | `login` | Formulario de inicio de sesión con validación |
+| Sign Up | `sign-up` | Formulario de registro con validación y date picker |
+| Forgot Password | `forgot-password` | Recuperación de contraseña vía email con validación |
+| Tabs (Main) | `tabs` | Navegación principal con bottom tabs |
 
 ## 🧪 Testing
 
 El proyecto incluye tests widget para:
 - Renderizado correcto de la pantalla de bienvenida
 - Navegación desde Welcome a Login
+
+```bash
+flutter test
+```
 
 ## 📄 License
 
