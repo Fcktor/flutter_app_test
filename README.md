@@ -1,99 +1,76 @@
-# Delivery App Test
+# Delivery App UI
 
-Una aplicación móvil de delivery de comida desarrollada con Flutter. Prototipo funcional con navegación entre pantallas de autenticación y exploración de lugares.
+A food delivery app interface built in Flutter. Working prototype covering the authentication flow and the main browsing experience, with form validation and tab navigation wired up end to end.
 
-## ✨ Features
+## Features
 
-- **Pantalla de bienvenida** con fondo borroso y dos opciones de acceso.
-- **Autenticación**: Login, Sign Up y recuperación de contraseña con validación de formularios.
-- **Navegación por tabs**: Explore, My Order, Favorite y Profile.
-- **Exploración**: Carrusel de tarjetas con PageView para descubrir lugares.
-- **Diseño responsive** adaptado a dispositivos móviles.
+- **Welcome screen** with blurred background and two entry paths
+- **Authentication**: login, sign up and password recovery, all with form validation
+- **Tab navigation**: Explore, My Order, Favorite and Profile
+- **Explore**: card carousel built on `PageView` for discovering places
+- **Responsive layout** adapted to mobile devices
 
-## 🛠 Built With
+## Built with
 
 - **[Flutter](https://flutter.dev/)** — SDK 3.10.3
 - **[Dart](https://dart.dev/)** — ^3.10.3
-- **[cupertino_icons](https://pub.dev/packages/cupertino_icons)** — Iconos iOS
+- **[cupertino_icons](https://pub.dev/packages/cupertino_icons)** — iOS icons
 
-## 📁 Project Structure
-
-```
-lib/
-├── main.dart                          # Entry point de la app
-└── src/
-    ├── assets/                        # Recursos estáticos (imágenes, iconos)
-    │   ├── images/
-    │   └── ...
-    ├── colors/
-    │   └── colors.dart                # Paleta de colores global
-    ├── features/
-    │   └── presentation/
-    │       ├── forgot_password_page/  # Recuperación de contraseña
-    │       ├── login_page/            # Inicio de sesión
-    │       ├── sign_up_page/          # Registro de usuario
-    │       ├── tabs/                  # Navegación principal con tabs
-    │       │   ├── explore_tabs/      # Descubrir lugares
-    │       │   ├── favorite_tab/      # Favoritos (placeholder)
-    │       │   ├── my_order_tab/      # Pedidos (placeholder)
-    │       │   ├── profile_tab/       # Perfil (placeholder)
-    │       │   └── tabs_page/         # Bottom Navigation Bar
-    │       ├── welcome_page/          # Pantalla de bienvenida
-    │       └── widget/                # Widgets reutilizables
-    │           └── back_button.dart   # Botón de retroceso
-    └── routes/
-        └── routes.dart                # Definición de rutas
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Flutter SDK 3.10.3 o superior
-- Dart SDK 3.10.3 o superior
-
-### Installation
-
-```bash
-# Clonar el repositorio
-git clone <url-del-repositorio>
-
-# Entrar al directorio
-cd flutter_app_test
-
-# Instalar dependencias
-flutter pub get
-
-# Ejecutar en modo debug
-flutter run
-```
-
-### Running Tests
-
-```bash
-flutter test
-```
-
-## 📱 Screens
+## Screens
 
 | Screen | Route | Description |
 |---|---|---|
-| Welcome | `welcome` | Landing page con branding y acceso a login/signup |
-| Login | `login` | Formulario de inicio de sesión con validación |
-| Sign Up | `sign-up` | Formulario de registro con validación y date picker |
-| Forgot Password | `forgot-password` | Recuperación de contraseña vía email con validación |
-| Tabs (Main) | `tabs` | Navegación principal con bottom tabs |
+| Welcome | `welcome` | Landing page with branding and access to login/signup |
+| Login | `login` | Sign-in form with validation |
+| Sign Up | `sign-up` | Registration form with validation and date picker |
+| Forgot Password | `forgot-password` | Email-based password recovery with validation |
+| Tabs (Main) | `tabs` | Main navigation with bottom tabs |
 
-## 🧪 Testing
+## Project structure
 
-El proyecto incluye tests widget para:
-- Renderizado correcto de la pantalla de bienvenida
-- Navegación desde Welcome a Login
+```
+lib/
+├── main.dart                          # App entry point
+└── src/
+    ├── assets/                        # Static resources (images, icons)
+    ├── colors/
+    │   └── colors.dart                # Global color palette
+    ├── features/
+    │   └── presentation/
+    │       ├── welcome_page/          # Welcome screen
+    │       ├── login_page/            # Sign in
+    │       ├── sign_up_page/          # Registration
+    │       ├── forgot_password_page/  # Password recovery
+    │       ├── tabs/                  # Main tab navigation
+    │       │   ├── explore_tabs/      # Discover places
+    │       │   ├── favorite_tab/      # Favorites (placeholder)
+    │       │   ├── my_order_tab/      # Orders (placeholder)
+    │       │   ├── profile_tab/       # Profile (placeholder)
+    │       │   └── tabs_page/         # Bottom navigation bar
+    │       └── widget/                # Reusable widgets
+    └── routes/
+        └── routes.dart                # Route definitions
+```
+
+## Getting started
+
+Requires Flutter SDK 3.10.3 or higher.
+
+```bash
+git clone https://github.com/albertfsalapi/delivery-app-ui
+cd delivery-app-ui
+flutter pub get
+flutter run
+```
+
+## Tests
+
+Widget tests cover welcome screen rendering and navigation from Welcome to Login.
 
 ```bash
 flutter test
 ```
 
-## 📄 License
+## Status
 
-This project is private and not licensed for public distribution.
+UI prototype. Favorites, Orders and Profile tabs are placeholders; there is no backend.
